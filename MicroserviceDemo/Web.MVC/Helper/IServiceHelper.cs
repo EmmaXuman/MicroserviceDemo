@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Web.MVC
+namespace Web.MVC.Helper
 {
     public interface IServiceHelper
     {
@@ -17,5 +14,9 @@ namespace Web.MVC
         /// </summary>
         /// <returns></returns>
         Task<string> GetOrder();
+        /// <summary>
+        /// 获取服务列表
+        /// </summary>
+        void GetService();
     }
 }
