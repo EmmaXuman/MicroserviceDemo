@@ -40,7 +40,7 @@ namespace Order.API
             });
 
             //×¢²á·þÎñ
-            app.RegisterConsul(Configuration, lifetime);
+            //app.RegisterConsul(Configuration, lifetime);
         }
     }
 }

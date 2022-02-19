@@ -10,10 +10,11 @@ namespace Web.MVC
     {
         public async Task<string> GetOrder()
         {
-            string[] serviceUrls = { "http://localhost:9060/api", "http://localhost:9061/api", "http://localhost:9062/api" };
-            //string serviceUrl = "http://localhost:9060/api";
+            //string[] serviceUrls = { "http://localhost:9060/api", "http://localhost:9061/api", "http://localhost:9062/api" };
+            string serviceUrl = "http://localhost:5000/api";
 
-            var client = new RestClient(serviceUrls[new Random().Next(0,3)]);
+            //var client = new RestClient(serviceUrls[new Random().Next(0,3)]);
+            var client = new RestClient(serviceUrl);
             var request = new RestRequest("/orders",Method.GET);
 
             var response = await client.ExecuteAsync(request);
@@ -22,10 +23,11 @@ namespace Web.MVC
 
         public async Task<string> GetProduct()
         {
-            string[] serviceUrls = { "http://localhost:9050/api", "http://localhost:9051/api", "http://localhost:9052/api" };
-            //string serviceUrl = "http://localhost:9050/api";
+            //string[] serviceUrls = { "http://localhost:9050/api", "http://localhost:9051/api", "http://localhost:9052/api" };
+            string serviceUrl = "http://localhost:6000/api";
 
-            var client = new RestClient(serviceUrls[new Random().Next(0,3)]);
+            //var client = new RestClient(serviceUrls[new Random().Next(0,3)]);
+            var client = new RestClient(serviceUrl);
             var request = new RestRequest("/products", Method.GET);
 
             var response = await client.ExecuteAsync(request);
